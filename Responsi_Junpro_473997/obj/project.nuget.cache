@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "fKlfq16BlskaRt5VDP5qebAXzI2oQRR0xNoAFwuusY8ad60OFHya0w5LG+Q6RAhy9OXP7K9/5CaXUqWHTo4K2A==",
+  "success": true,
+  "projectFilePath": "C:\\Responsi_Hiera AR\\473997-HieraAhmaddhioRhesadewa-ResponsiJuniorProject\\Responsi_Junpro_473997\\Responsi_Junpro_473997.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Hiera Ahmaddhio R\\.nuget\\packages\\npgsql\\6.0.7\\npgsql.6.0.7.nupkg.sha512",
+    "C:\\Users\\Hiera Ahmaddhio R\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
