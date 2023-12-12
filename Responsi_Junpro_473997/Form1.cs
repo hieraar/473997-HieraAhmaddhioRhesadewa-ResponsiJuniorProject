@@ -48,7 +48,7 @@ namespace Responsi_Junpro_473997
             try
             {
                 conn.Open();
-                sql = "@select * from kr_insert(:_nama,:_id_dep)";
+                sql = @"select * from kr_insert(:_nama,:_id_dep)";
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("_nama", tb_nama.Text);
                 cmd.Parameters.AddWithValue("_id_dep", cb_departemen.SelectedItem.ToString());
@@ -78,11 +78,10 @@ namespace Responsi_Junpro_473997
             try
             {
                 conn.Open();
-                sql = "@select * from kr_update(:_id_karyawan,:_nama,:_id_dep)";
+                sql = @"select * from kr_update2(:_id_karyawan,:_nama)";
                 cmd = new NpgsqlCommand(sql, conn);
                 cmd.Parameters.AddWithValue("_id_karyawan", r.Cells["_id_karyawan"].Value.ToString());
                 cmd.Parameters.AddWithValue("_nama", tb_nama.Text);
-                cmd.Parameters.AddWithValue("_id_dep", cb_departemen.SelectedItem.ToString());
                 if ((int)cmd.ExecuteScalar() == 1)
                 {
                     MessageBox.Show("Data karyawan berhasil diupdate", "Good Job!", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -113,7 +112,7 @@ namespace Responsi_Junpro_473997
                 try
                 {
                     conn.Open();
-                    sql = "@select * from kr_delete(:_id_karyawan)";
+                    sql = @"select * from kr_delete(:_id_karyawan)";
                     cmd = new NpgsqlCommand(sql, conn);
                     cmd.Parameters.AddWithValue("_id_karyawan", r.Cells["_id_karyawan"].Value.ToString());
                     if ((int)cmd.ExecuteScalar() == 1)
@@ -139,7 +138,6 @@ namespace Responsi_Junpro_473997
             {
                 r = dgvData.Rows[e.RowIndex];
                 tb_nama.Text = r.Cells["_nama"].Value.ToString();
-   
             }
         }
     }
